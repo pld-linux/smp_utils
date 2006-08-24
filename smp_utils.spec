@@ -1,12 +1,12 @@
 Summary:	Utilities for SAS Management Protocol (SMP)
 Summary(pl):	Narzêdzia do protoko³u SAS Management Protocol (SMP)
 Name:		smp_utils
-Version:	0.90
+Version:	0.91
 Release:	1
 License:	BSD
 Group:		Applications/System
 Source0:	http://www.torque.net/sg/p/%{name}-%{version}.tgz
-# Source0-md5:	0ab95552746c0c4b4cfa65da13985914
+# Source0-md5:	b5edc77a4bc06d4d0c4a08fb374b2231
 Patch0:		%{name}-make.patch
 URL:		http://www.torque.net/sg/smp_utils.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
