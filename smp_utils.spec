@@ -1,5 +1,5 @@
 Summary:	Utilities for SAS Management Protocol (SMP)
-Summary(pl):	Narzêdzia do protoko³u SAS Management Protocol (SMP)
+Summary(pl.UTF-8):   NarzÄ™dzia do protokoÅ‚u SAS Management Protocol (SMP)
 Name:		smp_utils
 Version:	0.92
 Release:	1
@@ -23,18 +23,18 @@ passthroughs are not mature. This package supports the Linux 2.4 and
 Warning: Some of these tools access the internals of your system and
 the incorrect usage of them may render your system inoperable.
 
-%description -l pl
-Ten pakiet zawiera narzêdzia, z których ka¿de wysy³a ¿±danie Serial
-Attached SCSI (SAS) Management Protocol (SMP) do urz±dzenia SMP. Je¶li
-¿±danie nie powiedzie siê, b³±d jest dekodowany. Je¶li ¿±danie
-powiedzie siê, odpowied¼ jest dekodowana i wypisywana w postaci
-szesnastkowej lub wyprowadzana binarnie. Ten pakiet obs³uguje wiele
-interfejsów, jako ¿e przekazywanie SMP nie jest jeszcze dojrza³e. Ten
-pakiet obs³uguje Linuksa zarówno z serii 2.4 jak i 2.6 i powinien byæ
-³atwy do sportowania na inne systemy operacyjne.
+%description -l pl.UTF-8
+Ten pakiet zawiera narzÄ™dzia, z ktÃ³rych kaÅ¼de wysyÅ‚a Å¼Ä…danie Serial
+Attached SCSI (SAS) Management Protocol (SMP) do urzÄ…dzenia SMP. JeÅ›li
+Å¼Ä…danie nie powiedzie siÄ™, bÅ‚Ä…d jest dekodowany. JeÅ›li Å¼Ä…danie
+powiedzie siÄ™, odpowiedÅº jest dekodowana i wypisywana w postaci
+szesnastkowej lub wyprowadzana binarnie. Ten pakiet obsÅ‚uguje wiele
+interfejsÃ³w, jako Å¼e przekazywanie SMP nie jest jeszcze dojrzaÅ‚e. Ten
+pakiet obsÅ‚uguje Linuksa zarÃ³wno z serii 2.4 jak i 2.6 i powinien byÄ‡
+Å‚atwy do sportowania na inne systemy operacyjne.
 
-Uwaga: niektóre z narzêdzi operuj± na wnêtrzno¶ciach systemu i ich
-nieprawid³owe u¿ycie mo¿e spowodowaæ niezdatno¶æ systemu do dalszej
+Uwaga: niektÃ³re z narzÄ™dzi operujÄ… na wnÄ™trznoÅ›ciach systemu i ich
+nieprawidÅ‚owe uÅ¼ycie moÅ¼e spowodowaÄ‡ niezdatnoÅ›Ä‡ systemu do dalszej
 pracy.
 
 %prep
