@@ -1,5 +1,5 @@
 Summary:	Utilities for SAS Management Protocol (SMP)
-Summary(pl.UTF-8):   Narzędzia do protokołu SAS Management Protocol (SMP)
+Summary(pl.UTF-8):	Narzędzia do protokołu SAS Management Protocol (SMP)
 Name:		smp_utils
 Version:	0.92
 Release:	1
