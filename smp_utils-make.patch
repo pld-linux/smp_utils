@@ -1,6 +1,6 @@
---- smp_utils-0.90/Makefile.orig	2006-06-11 21:05:50.000000000 +0200
-+++ smp_utils-0.90/Makefile	2006-06-27 12:21:44.114440000 +0200
-@@ -93,12 +93,11 @@
+--- smp_utils-0.93/Makefile.orig	2008-01-02 05:25:51.000000000 +0100
++++ smp_utils-0.93/Makefile	2008-01-07 19:32:05.688771593 +0100
+@@ -119,12 +119,11 @@
  install: $(EXECS)
  	install -d $(INSTDIR)
  	for name in $^; \
@@ -9,9 +9,9 @@
  	done
  	install -d $(MANDIR)/$(MAN_PREF)
  	for mp in $(MAN_PGS); \
--	 do install -o root -g root -m 644 $$mp $(MANDIR)/$(MAN_PREF); \
+-	 do install -o root -g root -m 644 doc/$$mp $(MANDIR)/$(MAN_PREF); \
 -	 gzip -9f $(MANDIR)/$(MAN_PREF)/$$mp; \
-+	 do install -m 644 $$mp $(MANDIR)/$(MAN_PREF); \
++	 do install -m 644 doc/$$mp $(MANDIR)/$(MAN_PREF); \
  	done
  
  uninstall:
