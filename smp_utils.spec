@@ -1,3 +1,5 @@
+# NOTE: beta versions are versioned with just new version number,
+#       so check URL for final releases
 Summary:	Utilities for SAS Management Protocol (SMP)
 Summary(pl.UTF-8):	Narzędzia do protokołu SAS Management Protocol (SMP)
 Name:		smp_utils
