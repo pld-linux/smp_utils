@@ -7,10 +7,10 @@ Version:	0.93
 Release:	1
 License:	BSD
 Group:		Applications/System
-Source0:	http://sg.torque.net/sg/p/%{name}-%{version}.tgz
+Source0:	http://sg.danny.cz/sg/p/%{name}-%{version}.tgz
 # Source0-md5:	7e3d6a5f28b2eca865df5f6a618db2e1
 Patch0:		%{name}-make.patch
-URL:		http://sg.torque.net/sg/smp_utils.html
+URL:		http://sg.danny.cz/sg/smp_utils.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
