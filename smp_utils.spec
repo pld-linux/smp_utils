@@ -1,13 +1,12 @@
 Summary:	Utilities for SAS Management Protocol (SMP)
 Summary(pl.UTF-8):	Narzędzia do protokołu SAS Management Protocol (SMP)
 Name:		smp_utils
-Version:	0.96
+Version:	0.97
 Release:	1
 License:	BSD
 Group:		Applications/System
 Source0:	http://sg.danny.cz/sg/p/%{name}-%{version}.tar.xz
-# Source0-md5:	71ba9b8727664a5f45ecfdc46c4b6b3c
-Patch0:		%{name}-make.patch
+# Source0-md5:	63fb3416f1a84a39bcd97d709be1cab0
 URL:		http://sg.danny.cz/sg/smp_utils.html
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
@@ -39,29 +38,63 @@ Uwaga: niektóre z narzędzi operują na wnętrznościach systemu i ich
 nieprawidłowe użycie może spowodować niezdatność systemu do dalszej
 pracy.
 
+%package devel
+Summary:	Header file for SMP Utils library
+Summary(pl.UTF-8):	Plik nagłówkowy biblioteki SMP Utils
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+
+%description devel
+Header file for SMP Utils library.
+
+%description devel -l pl.UTF-8
+Plik nagłówkowy biblioteki SMP Utils.
+
+%package static
+Summary:	Static SMP Utils library
+Summary(pl.UTF-8):	Statyczna biblioteka SMP Utils
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+
+%description static
+Static SMP Utils library.
+
+%description static -l pl.UTF-8
+Statyczna biblioteka SMP Utils.
+
 %prep
 %setup -q
-%patch0 -p1
 
 %build
-%{__make} \
-	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags} \$(EXTRA_FLAGS)" \
-	LDFLAGS="%{rpmldflags}"
+%configure
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
- 	PREFIX=%{_prefix} \
- 	INSTDIR=$RPM_BUILD_ROOT%{_bindir} \
- 	MANDIR=$RPM_BUILD_ROOT%{_mandir}
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
+
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING COVERAGE CREDITS ChangeLog README
-%attr(755,root,root) %{_bindir}/smp_*
+%attr(755,root,root) %{_sbindir}/smp_*
+%attr(755,root,root) %{_libdir}/libsmputils1.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libsmputils1.so.1
 %{_mandir}/man8/smp_*.8*
+
+%files devel
+%defattr(644,root,root,755)
+%attr(755,root,root) %ghost %{_libdir}/libsmputils1.so
+%{_libdir}/libsmputils1.la
+%{_includedir}/scsi/smp_lib.h
+
+%files static
+%defattr(644,root,root,755)
+%{_libdir}/libsmputils1.a
