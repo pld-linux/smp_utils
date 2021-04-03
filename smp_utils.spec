@@ -1,12 +1,12 @@
 Summary:	Utilities for SAS Management Protocol (SMP)
 Summary(pl.UTF-8):	Narzędzia do protokołu SAS Management Protocol (SMP)
 Name:		smp_utils
-Version:	0.98
+Version:	0.99
 Release:	1
 License:	BSD
 Group:		Applications/System
 Source0:	http://sg.danny.cz/sg/p/%{name}-%{version}.tar.xz
-# Source0-md5:	545544db04203b9f71f0ecb401e8a30c
+# Source0-md5:	04464828b24d1e0fe064c1a42c3e4515
 URL:		http://sg.danny.cz/sg/smp_utils.html
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
